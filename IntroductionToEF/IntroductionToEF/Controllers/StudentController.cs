@@ -29,14 +29,11 @@ namespace IntroductionToEF.Controllers
                 .Include(student => student.Enrollments)
                 .ThenInclude(enrollment => enrollment.Course)
                 .Include(student => student.StudentCard)
+                .Include(student => student.AssignmentResults)
+                .ThenInclude(assRessult => assRessult.Assignment)
                 .ToListAsync();
 
-            //var results = students.Select(student => new
-            //{
-            //    studentID = student.ID,
-            //    studentName = student.FirstMidName,
-            //    classIRN = student.StudentCard?.ClassIRN,   
-            //});
+
             var results = students.Select(student => new GetAllStudentsResponse
             {
                 StudentId = student.ID,
@@ -51,8 +48,17 @@ namespace IntroductionToEF.Controllers
                 {
                     ClassIRN = student.StudentCard?.ClassIRN,
                     Period = student.StudentCard?.Period,
-                }
+                },
+                AssignmentResultResponse = student.AssignmentResults.Select(assign => new AssignmentResultResponse
+                {
+                    ID = assign.ID,
+                    AssignmentName = assign.Assignment.Title,
+                    Description = assign.Assignment.Description,
+                    Score = assign.Score
+
+                }).ToList()
             });
+
 
             return Ok(results);
 

@@ -1,5 +1,67 @@
 [
   {
+    "ContainingType": "IntroductionToEF.Controllers.AssignmentController",
+    "Method": "GetAll",
+    "RelativePath": "api/Assignment",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IntroductionToEF.Controllers.AssignmentController",
+    "Method": "Create",
+    "RelativePath": "api/Assignment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "IntroductionToEF.WebModel.CreateAssignmentRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IntroductionToEF.Controllers.AssignmentResultController",
+    "Method": "GetAll",
+    "RelativePath": "api/AssignmentResult",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IntroductionToEF.Controllers.AssignmentResultController",
+    "Method": "Create",
+    "RelativePath": "api/AssignmentResult",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "IntroductionToEF.WebModel.CreateAssignmentResultRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IntroductionToEF.Controllers.CourseController",
+    "Method": "GetAll",
+    "RelativePath": "api/Course",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "IntroductionToEF.Controllers.CourseController",
     "Method": "Create",
     "RelativePath": "api/Course",
@@ -13,6 +75,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "IntroductionToEF.Controllers.CourseController",
+    "Method": "TestLog",
+    "RelativePath": "api/Course/testlog",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {

@@ -9,5 +9,6 @@ namespace IntroductionToEF.WebModel
         public string StudentLastName { get; set; }
         public List<RegisteredCourse> RegisteredCourseList { get; set; }
         public CardResponse CardResponse { get; set; }
+        public List<AssignmentResultResponse> AssignmentResultResponse { get; set; }    
     }
 }

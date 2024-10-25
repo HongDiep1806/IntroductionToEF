@@ -7,6 +7,8 @@
         public string FirstMidName { get; set; }//
         public List<Enrollment> Enrollments { get; set; } // list object : namecourse and id course 
         public StudentCard StudentCard { get; set; }
+        public ICollection<AssignmentResult> AssignmentResults { get; set; }
+
 
     }
 }

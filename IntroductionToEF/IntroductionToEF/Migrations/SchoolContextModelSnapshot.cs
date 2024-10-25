@@ -21,6 +21,58 @@ namespace IntroductionToEF.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("IntroductionToEF.Model.Assignment", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<int>("CourseID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("CourseID");
+
+                    b.ToTable("Assignments");
+                });
+
+            modelBuilder.Entity("IntroductionToEF.Model.AssignmentResult", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<int>("AssignmentID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Score")
+                        .HasColumnType("int");
+
+                    b.Property<int>("StudentID")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("AssignmentID");
+
+                    b.HasIndex("StudentID");
+
+                    b.ToTable("AssignmentResults");
+                });
+
             modelBuilder.Entity("IntroductionToEF.Model.Course", b =>
                 {
                     b.Property<int>("ID")
@@ -103,6 +155,36 @@ namespace IntroductionToEF.Migrations
                     b.ToTable("StudentCards");
                 });
 
+            modelBuilder.Entity("IntroductionToEF.Model.Assignment", b =>
+                {
+                    b.HasOne("IntroductionToEF.Model.Course", "Course")
+                        .WithMany("Assignments")
+                        .HasForeignKey("CourseID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Course");
+                });
+
+            modelBuilder.Entity("IntroductionToEF.Model.AssignmentResult", b =>
+                {
+                    b.HasOne("IntroductionToEF.Model.Assignment", "Assignment")
+                        .WithMany()
+                        .HasForeignKey("AssignmentID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("IntroductionToEF.Model.Student", "Student")
+                        .WithMany("AssignmentResults")
+                        .HasForeignKey("StudentID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Assignment");
+
+                    b.Navigation("Student");
+                });
+
             modelBuilder.Entity("IntroductionToEF.Model.Enrollment", b =>
                 {
                     b.HasOne("IntroductionToEF.Model.Course", "Course")
@@ -135,11 +217,15 @@ namespace IntroductionToEF.Migrations
 
             modelBuilder.Entity("IntroductionToEF.Model.Course", b =>
                 {
+                    b.Navigation("Assignments");
+
                     b.Navigation("Enrollments");
                 });
 
             modelBuilder.Entity("IntroductionToEF.Model.Student", b =>
                 {
+                    b.Navigation("AssignmentResults");
+
                     b.Navigation("Enrollments");
 
                     b.Navigation("StudentCard")

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Asus\\source\\repos\\IntroductionToEF\\IntroductionToEF\\IntroductionToEF.csproj": {}
+    "E:\\IntroToEF\\IntroductionToEF\\IntroductionToEF\\IntroductionToEF\\IntroductionToEF.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Asus\\source\\repos\\IntroductionToEF\\IntroductionToEF\\IntroductionToEF.csproj": {
+    "E:\\IntroToEF\\IntroductionToEF\\IntroductionToEF\\IntroductionToEF\\IntroductionToEF.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Asus\\source\\repos\\IntroductionToEF\\IntroductionToEF\\IntroductionToEF.csproj",
+        "projectUniqueName": "E:\\IntroToEF\\IntroductionToEF\\IntroductionToEF\\IntroductionToEF\\IntroductionToEF.csproj",
         "projectName": "IntroductionToEF",
-        "projectPath": "C:\\Users\\Asus\\source\\repos\\IntroductionToEF\\IntroductionToEF\\IntroductionToEF.csproj",
+        "projectPath": "E:\\IntroToEF\\IntroductionToEF\\IntroductionToEF\\IntroductionToEF\\IntroductionToEF.csproj",
         "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Asus\\source\\repos\\IntroductionToEF\\IntroductionToEF\\obj\\",
+        "outputPath": "E:\\IntroToEF\\IntroductionToEF\\IntroductionToEF\\IntroductionToEF\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -67,6 +67,18 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.8, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[4.0.2, )"
+            },
+            "Serilog.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[6.0.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

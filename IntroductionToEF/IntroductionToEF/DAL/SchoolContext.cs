@@ -14,6 +14,9 @@ namespace IntroductionToEF.DAL
         public DbSet<Course> Courses { get; set; }
         public DbSet<Enrollment> Enrollments { get; set; }
         public DbSet<StudentCard> StudentCards { get; set; }
+        public DbSet<AssignmentResult> AssignmentResults { get; set; }
+        public DbSet<Assignment> Assignments { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Student>()
