@@ -18,12 +18,6 @@
         public async Task Invoke(HttpContext context)
         {
 
-            //await context.Response.WriteAsync("<div> before - CustomeMiddleware </div>");
-            //await _next(context);
-            //await context.Response.WriteAsync("<div> after - CustomeMiddleware </div>");
-
-
-
             _logger.LogInformation("Start Custome Middleware 1");
             await _next(context);
             _logger.LogInformation("Back to middleware 1");

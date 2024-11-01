@@ -7,12 +7,24 @@
       "RelativeMoniker": "D:0:0:{E0AE8E08-B5FC-4AEC-94C4-BBDC6E68BC6C}|IntroductionToEF\\IntroductionToEF.csproj|solutionrelative:introductiontoef\\hostcommon\\middleware\\apirequestmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E0AE8E08-B5FC-4AEC-94C4-BBDC6E68BC6C}|IntroductionToEF\\IntroductionToEF.csproj|e:\\introtoef\\introductiontoef\\introductiontoef\\introductiontoef\\model\\requestloginfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0AE8E08-B5FC-4AEC-94C4-BBDC6E68BC6C}|IntroductionToEF\\IntroductionToEF.csproj|solutionrelative:introductiontoef\\model\\requestloginfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E0AE8E08-B5FC-4AEC-94C4-BBDC6E68BC6C}|IntroductionToEF\\IntroductionToEF.csproj|e:\\introtoef\\introductiontoef\\introductiontoef\\introductiontoef\\hostcommon\\middleware\\customemiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E0AE8E08-B5FC-4AEC-94C4-BBDC6E68BC6C}|IntroductionToEF\\IntroductionToEF.csproj|solutionrelative:introductiontoef\\hostcommon\\middleware\\customemiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0AE8E08-B5FC-4AEC-94C4-BBDC6E68BC6C}|IntroductionToEF\\IntroductionToEF.csproj|e:\\introtoef\\introductiontoef\\introductiontoef\\introductiontoef\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E0AE8E08-B5FC-4AEC-94C4-BBDC6E68BC6C}|IntroductionToEF\\IntroductionToEF.csproj|solutionrelative:introductiontoef\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0AE8E08-B5FC-4AEC-94C4-BBDC6E68BC6C}|IntroductionToEF\\IntroductionToEF.csproj|e:\\introtoef\\introductiontoef\\introductiontoef\\introductiontoef\\webmodel\\createassignmentresultrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0AE8E08-B5FC-4AEC-94C4-BBDC6E68BC6C}|IntroductionToEF\\IntroductionToEF.csproj|solutionrelative:introductiontoef\\webmodel\\createassignmentresultrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0AE8E08-B5FC-4AEC-94C4-BBDC6E68BC6C}|IntroductionToEF\\IntroductionToEF.csproj|e:\\introtoef\\introductiontoef\\introductiontoef\\introductiontoef\\model\\studentcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0AE8E08-B5FC-4AEC-94C4-BBDC6E68BC6C}|IntroductionToEF\\IntroductionToEF.csproj|solutionrelative:introductiontoef\\model\\studentcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E0AE8E08-B5FC-4AEC-94C4-BBDC6E68BC6C}|IntroductionToEF\\IntroductionToEF.csproj|e:\\introtoef\\introductiontoef\\introductiontoef\\introductiontoef\\model\\requestloginfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E0AE8E08-B5FC-4AEC-94C4-BBDC6E68BC6C}|IntroductionToEF\\IntroductionToEF.csproj|solutionrelative:introductiontoef\\model\\requestloginfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E0AE8E08-B5FC-4AEC-94C4-BBDC6E68BC6C}|IntroductionToEF\\IntroductionToEF.csproj|e:\\introtoef\\introductiontoef\\introductiontoef\\introductiontoef\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -45,14 +57,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{E0AE8E08-B5FC-4AEC-94C4-BBDC6E68BC6C}|IntroductionToEF\\IntroductionToEF.csproj|e:\\introtoef\\introductiontoef\\introductiontoef\\introductiontoef\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E0AE8E08-B5FC-4AEC-94C4-BBDC6E68BC6C}|IntroductionToEF\\IntroductionToEF.csproj|solutionrelative:introductiontoef\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E0AE8E08-B5FC-4AEC-94C4-BBDC6E68BC6C}|IntroductionToEF\\IntroductionToEF.csproj|e:\\introtoef\\introductiontoef\\introductiontoef\\introductiontoef\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{E0AE8E08-B5FC-4AEC-94C4-BBDC6E68BC6C}|IntroductionToEF\\IntroductionToEF.csproj|solutionrelative:introductiontoef\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E0AE8E08-B5FC-4AEC-94C4-BBDC6E68BC6C}|IntroductionToEF\\IntroductionToEF.csproj|e:\\introtoef\\introductiontoef\\introductiontoef\\introductiontoef\\model\\studentcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E0AE8E08-B5FC-4AEC-94C4-BBDC6E68BC6C}|IntroductionToEF\\IntroductionToEF.csproj|solutionrelative:introductiontoef\\model\\studentcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E0AE8E08-B5FC-4AEC-94C4-BBDC6E68BC6C}|IntroductionToEF\\IntroductionToEF.csproj|e:\\introtoef\\introductiontoef\\introductiontoef\\introductiontoef\\model\\grade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -94,11 +98,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "CreateAssignmentResultRequest.cs",
+              "DocumentMoniker": "E:\\IntroToEF\\IntroductionToEF\\IntroductionToEF\\IntroductionToEF\\WebModel\\CreateAssignmentResultRequest.cs",
+              "RelativeDocumentMoniker": "IntroductionToEF\\WebModel\\CreateAssignmentResultRequest.cs",
+              "ToolTip": "E:\\IntroToEF\\IntroductionToEF\\IntroductionToEF\\IntroductionToEF\\WebModel\\CreateAssignmentResultRequest.cs",
+              "RelativeToolTip": "IntroductionToEF\\WebModel\\CreateAssignmentResultRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T07:54:20.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "RequestLogInfo.cs",
               "DocumentMoniker": "E:\\IntroToEF\\IntroductionToEF\\IntroductionToEF\\IntroductionToEF\\Model\\RequestLogInfo.cs",
               "RelativeDocumentMoniker": "IntroductionToEF\\Model\\RequestLogInfo.cs",
@@ -116,14 +133,14 @@
               "RelativeDocumentMoniker": "IntroductionToEF\\HostCommon\\Middleware\\APIRequestMiddleware.cs",
               "ToolTip": "E:\\IntroToEF\\IntroductionToEF\\IntroductionToEF\\IntroductionToEF\\HostCommon\\Middleware\\APIRequestMiddleware.cs",
               "RelativeToolTip": "IntroductionToEF\\HostCommon\\Middleware\\APIRequestMiddleware.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAYwEYAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-20T04:39:09.449Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "IntroductionToEF.csproj",
               "DocumentMoniker": "E:\\IntroToEF\\IntroductionToEF\\IntroductionToEF\\IntroductionToEF\\IntroductionToEF.csproj",
               "RelativeDocumentMoniker": "IntroductionToEF\\IntroductionToEF.csproj",
@@ -135,7 +152,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\IntroToEF\\IntroductionToEF\\IntroductionToEF\\IntroductionToEF\\Program.cs",
               "RelativeDocumentMoniker": "IntroductionToEF\\Program.cs",
@@ -147,31 +164,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "CustomeMiddleware.cs",
               "DocumentMoniker": "E:\\IntroToEF\\IntroductionToEF\\IntroductionToEF\\IntroductionToEF\\HostCommon\\Middleware\\CustomeMiddleware.cs",
               "RelativeDocumentMoniker": "IntroductionToEF\\HostCommon\\Middleware\\CustomeMiddleware.cs",
               "ToolTip": "E:\\IntroToEF\\IntroductionToEF\\IntroductionToEF\\IntroductionToEF\\HostCommon\\Middleware\\CustomeMiddleware.cs",
               "RelativeToolTip": "IntroductionToEF\\HostCommon\\Middleware\\CustomeMiddleware.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB0AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T02:58:20.979Z"
+              "WhenOpened": "2024-10-20T02:58:20.979Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 2,
               "Title": "appsettings.json",
               "DocumentMoniker": "E:\\IntroToEF\\IntroductionToEF\\IntroductionToEF\\IntroductionToEF\\appsettings.json",
               "RelativeDocumentMoniker": "IntroductionToEF\\appsettings.json",
               "ToolTip": "E:\\IntroToEF\\IntroductionToEF\\IntroductionToEF\\IntroductionToEF\\appsettings.json",
               "RelativeToolTip": "IntroductionToEF\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAB/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-18T14:00:53.799Z"
+              "WhenOpened": "2024-10-18T14:00:53.799Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Grade.cs",
               "DocumentMoniker": "E:\\IntroToEF\\IntroductionToEF\\IntroductionToEF\\IntroductionToEF\\Model\\Grade.cs",
               "RelativeDocumentMoniker": "IntroductionToEF\\Model\\Grade.cs",
@@ -183,7 +202,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "Enrollment.cs",
               "DocumentMoniker": "E:\\IntroToEF\\IntroductionToEF\\IntroductionToEF\\IntroductionToEF\\Model\\Enrollment.cs",
               "RelativeDocumentMoniker": "IntroductionToEF\\Model\\Enrollment.cs",
@@ -195,7 +214,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "CourseStudent.cs",
               "DocumentMoniker": "E:\\IntroToEF\\IntroductionToEF\\IntroductionToEF\\IntroductionToEF\\Model\\CourseStudent.cs",
               "RelativeDocumentMoniker": "IntroductionToEF\\Model\\CourseStudent.cs",
@@ -207,7 +226,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "Course.cs",
               "DocumentMoniker": "E:\\IntroToEF\\IntroductionToEF\\IntroductionToEF\\IntroductionToEF\\Model\\Course.cs",
               "RelativeDocumentMoniker": "IntroductionToEF\\Model\\Course.cs",
@@ -219,7 +238,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "AssignmentResult.cs",
               "DocumentMoniker": "E:\\IntroToEF\\IntroductionToEF\\IntroductionToEF\\IntroductionToEF\\Model\\AssignmentResult.cs",
               "RelativeDocumentMoniker": "IntroductionToEF\\Model\\AssignmentResult.cs",
@@ -231,7 +250,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "Assignment.cs",
               "DocumentMoniker": "E:\\IntroToEF\\IntroductionToEF\\IntroductionToEF\\IntroductionToEF\\Model\\Assignment.cs",
               "RelativeDocumentMoniker": "IntroductionToEF\\Model\\Assignment.cs",
@@ -243,7 +262,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "GetAllStudentCardResponse.cs",
               "DocumentMoniker": "E:\\IntroToEF\\IntroductionToEF\\IntroductionToEF\\IntroductionToEF\\WebModel\\GetAllStudentCardResponse.cs",
               "RelativeDocumentMoniker": "IntroductionToEF\\WebModel\\GetAllStudentCardResponse.cs",
@@ -255,7 +274,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 4,
               "Title": "StudentCard.cs",
               "DocumentMoniker": "E:\\IntroToEF\\IntroductionToEF\\IntroductionToEF\\IntroductionToEF\\Model\\StudentCard.cs",
               "RelativeDocumentMoniker": "IntroductionToEF\\Model\\StudentCard.cs",
@@ -263,11 +282,12 @@
               "RelativeToolTip": "IntroductionToEF\\Model\\StudentCard.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T13:46:02.458Z"
+              "WhenOpened": "2024-10-12T13:46:02.458Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "StudentController.cs",
               "DocumentMoniker": "E:\\IntroToEF\\IntroductionToEF\\IntroductionToEF\\IntroductionToEF\\Controllers\\StudentController.cs",
               "RelativeDocumentMoniker": "IntroductionToEF\\Controllers\\StudentController.cs",
@@ -279,7 +299,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "Student.cs",
               "DocumentMoniker": "E:\\IntroToEF\\IntroductionToEF\\IntroductionToEF\\IntroductionToEF\\Model\\Student.cs",
               "RelativeDocumentMoniker": "IntroductionToEF\\Model\\Student.cs",
@@ -291,7 +311,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "SchoolContext.cs",
               "DocumentMoniker": "E:\\IntroToEF\\IntroductionToEF\\IntroductionToEF\\IntroductionToEF\\DAL\\SchoolContext.cs",
               "RelativeDocumentMoniker": "IntroductionToEF\\DAL\\SchoolContext.cs",
@@ -303,7 +323,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "CourseController.cs",
               "DocumentMoniker": "E:\\IntroToEF\\IntroductionToEF\\IntroductionToEF\\IntroductionToEF\\Controllers\\CourseController.cs",
               "RelativeDocumentMoniker": "IntroductionToEF\\Controllers\\CourseController.cs",
@@ -315,7 +335,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "IntroductionToEF.http",
               "DocumentMoniker": "E:\\IntroToEF\\IntroductionToEF\\IntroductionToEF\\IntroductionToEF\\IntroductionToEF.http",
               "RelativeDocumentMoniker": "IntroductionToEF\\IntroductionToEF.http",
@@ -327,7 +347,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "WeatherForecast.cs",
               "DocumentMoniker": "E:\\IntroToEF\\IntroductionToEF\\IntroductionToEF\\IntroductionToEF\\WeatherForecast.cs",
               "RelativeDocumentMoniker": "IntroductionToEF\\WeatherForecast.cs",
@@ -339,7 +359,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "WeatherForecastController.cs",
               "DocumentMoniker": "E:\\IntroToEF\\IntroductionToEF\\IntroductionToEF\\IntroductionToEF\\Controllers\\WeatherForecastController.cs",
               "RelativeDocumentMoniker": "IntroductionToEF\\Controllers\\WeatherForecastController.cs",
