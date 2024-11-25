@@ -1,0 +1,399 @@
+2024-11-01 18:54:47.602 +07:00 [INF] Now listening on: https://localhost:7107
+2024-11-01 18:54:47.630 +07:00 [INF] Now listening on: http://localhost:5159
+2024-11-01 18:54:49.560 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7107/swagger/index.html - null null
+2024-11-01 18:54:49.796 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7107/swagger/index.html - 200 null text/html;charset=utf-8 239.5477ms
+2024-11-01 18:54:49.808 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7107/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-01 18:54:49.816 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7107/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 7.9159ms
+2024-11-01 18:54:49.826 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7107/_vs/browserLink - null null
+2024-11-01 18:54:49.876 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7107/_vs/browserLink - 200 null text/javascript; charset=UTF-8 50.4244ms
+2024-11-01 18:54:50.051 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7107/swagger/v1/swagger.json - null null
+2024-11-01 18:54:50.179 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7107/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 128.3582ms
+2024-11-01 18:56:25.722 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7107/api/Assignment - null null
+2024-11-01 18:56:25.733 +07:00 [INF] Start Custome Middleware 1
+2024-11-01 18:56:25.733 +07:00 [INF] Start Custome Middleware 2
+2024-11-01 18:56:25.735 +07:00 [INF] Start middleware 3
+2024-11-01 18:56:25.753 +07:00 [INF]  IP User Address : ::1
+2024-11-01 18:56:25.763 +07:00 [INF] Request Information: {"Method":"GET","Protocol":"HTTP/2","Path":"/api/Assignment","Host":"localhost:7107","Headers":"Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpRequestHeaders","Body":"","$type":"RequestLogInfo"}
+2024-11-01 18:56:25.768 +07:00 [INF] Executing endpoint 'IntroductionToEF.Controllers.AssignmentController.GetAll (IntroductionToEF)'
+2024-11-01 18:56:25.796 +07:00 [INF] Route matched with {action = "GetAll", controller = "Assignment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller IntroductionToEF.Controllers.AssignmentController (IntroductionToEF).
+2024-11-01 18:56:27.934 +07:00 [INF] Executed DbCommand (66ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ID], [a].[CourseID], [a].[Description], [a].[Title], [c].[ID], [c].[Credits], [c].[Title]
+FROM [Assignments] AS [a]
+INNER JOIN [Courses] AS [c] ON [a].[CourseID] = [c].[ID]
+2024-11-01 18:56:28.005 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[IntroductionToEF.Model.Assignment, IntroductionToEF, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-01 18:56:28.024 +07:00 [INF] Executed action IntroductionToEF.Controllers.AssignmentController.GetAll (IntroductionToEF) in 2224.5638ms
+2024-11-01 18:56:28.025 +07:00 [INF] Executed endpoint 'IntroductionToEF.Controllers.AssignmentController.GetAll (IntroductionToEF)'
+2024-11-01 18:56:28.025 +07:00 [ERR] An error occurred while processing the request.
+System.Text.Json.JsonException: A possible object cycle was detected. This can either be due to a cycle or if the object depth is larger than the maximum allowed depth of 32. Consider using ReferenceHandler.Preserve on JsonSerializerOptions to support cycles. Path: $.Course.Assignments.Course.Assignments.Course.Assignments.Course.Assignments.Course.Assignments.Course.Assignments.Course.Assignments.Course.Assignments.Course.Assignments.Course.Assignments.ID.
+   at System.Text.Json.ThrowHelper.ThrowJsonException_SerializerCycleDetected(Int32 maxDepth)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.ListOfTConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at IntroductionToEF.HostCommon.Middleware.APIRequestMiddleware.Invoke(HttpContext context) in E:\IntroToEF\IntroductionToEF\IntroductionToEF\IntroductionToEF\HostCommon\Middleware\APIRequestMiddleware.cs:line 53
+2024-11-01 18:56:28.073 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: Stream was not readable.
+   at System.IO.StreamReader..ctor(Stream stream, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean leaveOpen)
+   at IntroductionToEF.HostCommon.Middleware.APIRequestMiddleware.Invoke(HttpContext context) in E:\IntroToEF\IntroductionToEF\IntroductionToEF\IntroductionToEF\HostCommon\Middleware\APIRequestMiddleware.cs:line 61
+   at IntroductionToEF.HostCommon.Middleware.CustomeMiddleware2.Invoke(HttpContext context) in E:\IntroToEF\IntroductionToEF\IntroductionToEF\IntroductionToEF\HostCommon\Middleware\CustomeMiddleware2.cs:line 22
+   at IntroductionToEF.HostCommon.Middleware.CustomeMiddleware.Invoke(HttpContext context) in E:\IntroToEF\IntroductionToEF\IntroductionToEF\IntroductionToEF\HostCommon\Middleware\CustomeMiddleware.cs:line 22
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-11-01 18:56:28.083 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7107/api/Assignment - 500 null text/plain; charset=utf-8 2360.6964ms
+2024-11-01 18:56:36.568 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7107/api/Student - null null
+2024-11-01 18:56:36.570 +07:00 [INF] Start Custome Middleware 1
+2024-11-01 18:56:36.571 +07:00 [INF] Start Custome Middleware 2
+2024-11-01 18:56:36.571 +07:00 [INF] Start middleware 3
+2024-11-01 18:56:36.571 +07:00 [INF]  IP User Address : ::1
+2024-11-01 18:56:36.571 +07:00 [INF] Request Information: {"Method":"GET","Protocol":"HTTP/2","Path":"/api/Student","Host":"localhost:7107","Headers":"Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpRequestHeaders","Body":"","$type":"RequestLogInfo"}
+2024-11-01 18:56:36.571 +07:00 [INF] Executing endpoint 'IntroductionToEF.Controllers.StudentController.GetAll (IntroductionToEF)'
+2024-11-01 18:56:36.574 +07:00 [INF] Route matched with {action = "GetAll", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller IntroductionToEF.Controllers.StudentController (IntroductionToEF).
+2024-11-01 18:56:36.642 +07:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2024-11-01 18:56:36.680 +07:00 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[ID], [s].[FirstMidName], [s].[LastName], [s0].[StudentID], [t].[EnrollmentID], [t].[CourseID], [t].[StudentID], [t].[ID], [t].[Credits], [t].[Title], [s0].[ClassIRN], [s0].[Period], [t0].[ID], [t0].[AssignmentID], [t0].[Score], [t0].[StudentID], [t0].[ID0], [t0].[CourseID], [t0].[Description], [t0].[Title]
+FROM [Students] AS [s]
+LEFT JOIN [StudentCards] AS [s0] ON [s].[ID] = [s0].[StudentID]
+LEFT JOIN (
+    SELECT [e].[EnrollmentID], [e].[CourseID], [e].[StudentID], [c].[ID], [c].[Credits], [c].[Title]
+    FROM [Enrollments] AS [e]
+    INNER JOIN [Courses] AS [c] ON [e].[CourseID] = [c].[ID]
+) AS [t] ON [s].[ID] = [t].[StudentID]
+LEFT JOIN (
+    SELECT [a].[ID], [a].[AssignmentID], [a].[Score], [a].[StudentID], [a0].[ID] AS [ID0], [a0].[CourseID], [a0].[Description], [a0].[Title]
+    FROM [AssignmentResults] AS [a]
+    INNER JOIN [Assignments] AS [a0] ON [a].[AssignmentID] = [a0].[ID]
+) AS [t0] ON [s].[ID] = [t0].[StudentID]
+ORDER BY [s].[ID], [s0].[StudentID], [t].[EnrollmentID], [t].[ID], [t0].[ID]
+2024-11-01 18:56:36.686 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[IntroductionToEF.Model.Student, IntroductionToEF, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[IntroductionToEF.WebModel.GetAllStudentsResponse, IntroductionToEF, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-01 18:56:36.693 +07:00 [INF] Executed action IntroductionToEF.Controllers.StudentController.GetAll (IntroductionToEF) in 118.4251ms
+2024-11-01 18:56:36.693 +07:00 [INF] Executed endpoint 'IntroductionToEF.Controllers.StudentController.GetAll (IntroductionToEF)'
+2024-11-01 18:56:36.694 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: Stream was not readable.
+   at System.IO.StreamReader..ctor(Stream stream, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean leaveOpen)
+   at IntroductionToEF.HostCommon.Middleware.APIRequestMiddleware.Invoke(HttpContext context) in E:\IntroToEF\IntroductionToEF\IntroductionToEF\IntroductionToEF\HostCommon\Middleware\APIRequestMiddleware.cs:line 61
+   at IntroductionToEF.HostCommon.Middleware.CustomeMiddleware2.Invoke(HttpContext context) in E:\IntroToEF\IntroductionToEF\IntroductionToEF\IntroductionToEF\HostCommon\Middleware\CustomeMiddleware2.cs:line 22
+   at IntroductionToEF.HostCommon.Middleware.CustomeMiddleware.Invoke(HttpContext context) in E:\IntroToEF\IntroductionToEF\IntroductionToEF\IntroductionToEF\HostCommon\Middleware\CustomeMiddleware.cs:line 22
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-11-01 18:56:36.694 +07:00 [WRN] The response has already started, the error page middleware will not be executed.
+2024-11-01 18:56:36.697 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7107/api/Student - 200 null application/json; charset=utf-8 128.461ms
+2024-11-01 18:56:44.272 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7107/api/Student - null null
+2024-11-01 18:56:44.272 +07:00 [INF] Start Custome Middleware 1
+2024-11-01 18:56:44.272 +07:00 [INF] Start Custome Middleware 2
+2024-11-01 18:56:44.272 +07:00 [INF] Start middleware 3
+2024-11-01 18:56:44.272 +07:00 [INF]  IP User Address : ::1
+2024-11-01 18:56:44.272 +07:00 [INF] Request Information: {"Method":"GET","Protocol":"HTTP/2","Path":"/api/Student","Host":"localhost:7107","Headers":"Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpRequestHeaders","Body":"","$type":"RequestLogInfo"}
+2024-11-01 18:56:44.272 +07:00 [INF] Executing endpoint 'IntroductionToEF.Controllers.StudentController.GetAll (IntroductionToEF)'
+2024-11-01 18:56:44.272 +07:00 [INF] Route matched with {action = "GetAll", controller = "Student"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller IntroductionToEF.Controllers.StudentController (IntroductionToEF).
+2024-11-01 18:56:44.325 +07:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[ID], [s].[FirstMidName], [s].[LastName], [s0].[StudentID], [t].[EnrollmentID], [t].[CourseID], [t].[StudentID], [t].[ID], [t].[Credits], [t].[Title], [s0].[ClassIRN], [s0].[Period], [t0].[ID], [t0].[AssignmentID], [t0].[Score], [t0].[StudentID], [t0].[ID0], [t0].[CourseID], [t0].[Description], [t0].[Title]
+FROM [Students] AS [s]
+LEFT JOIN [StudentCards] AS [s0] ON [s].[ID] = [s0].[StudentID]
+LEFT JOIN (
+    SELECT [e].[EnrollmentID], [e].[CourseID], [e].[StudentID], [c].[ID], [c].[Credits], [c].[Title]
+    FROM [Enrollments] AS [e]
+    INNER JOIN [Courses] AS [c] ON [e].[CourseID] = [c].[ID]
+) AS [t] ON [s].[ID] = [t].[StudentID]
+LEFT JOIN (
+    SELECT [a].[ID], [a].[AssignmentID], [a].[Score], [a].[StudentID], [a0].[ID] AS [ID0], [a0].[CourseID], [a0].[Description], [a0].[Title]
+    FROM [AssignmentResults] AS [a]
+    INNER JOIN [Assignments] AS [a0] ON [a].[AssignmentID] = [a0].[ID]
+) AS [t0] ON [s].[ID] = [t0].[StudentID]
+ORDER BY [s].[ID], [s0].[StudentID], [t].[EnrollmentID], [t].[ID], [t0].[ID]
+2024-11-01 18:56:44.326 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[IntroductionToEF.Model.Student, IntroductionToEF, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[IntroductionToEF.WebModel.GetAllStudentsResponse, IntroductionToEF, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-01 18:56:44.327 +07:00 [INF] Executed action IntroductionToEF.Controllers.StudentController.GetAll (IntroductionToEF) in 54.589ms
+2024-11-01 18:56:44.327 +07:00 [INF] Executed endpoint 'IntroductionToEF.Controllers.StudentController.GetAll (IntroductionToEF)'
+2024-11-01 18:56:44.327 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: Stream was not readable.
+   at System.IO.StreamReader..ctor(Stream stream, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean leaveOpen)
+   at IntroductionToEF.HostCommon.Middleware.APIRequestMiddleware.Invoke(HttpContext context) in E:\IntroToEF\IntroductionToEF\IntroductionToEF\IntroductionToEF\HostCommon\Middleware\APIRequestMiddleware.cs:line 61
+   at IntroductionToEF.HostCommon.Middleware.CustomeMiddleware2.Invoke(HttpContext context) in E:\IntroToEF\IntroductionToEF\IntroductionToEF\IntroductionToEF\HostCommon\Middleware\CustomeMiddleware2.cs:line 22
+   at IntroductionToEF.HostCommon.Middleware.CustomeMiddleware.Invoke(HttpContext context) in E:\IntroToEF\IntroductionToEF\IntroductionToEF\IntroductionToEF\HostCommon\Middleware\CustomeMiddleware.cs:line 22
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-11-01 18:56:44.328 +07:00 [WRN] The response has already started, the error page middleware will not be executed.
+2024-11-01 18:56:44.329 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7107/api/Student - 200 null application/json; charset=utf-8 57.3526ms
+2024-11-01 18:56:51.382 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7107/api/StudentCard - null null
+2024-11-01 18:56:51.382 +07:00 [INF] Start Custome Middleware 1
+2024-11-01 18:56:51.382 +07:00 [INF] Start Custome Middleware 2
+2024-11-01 18:56:51.382 +07:00 [INF] Start middleware 3
+2024-11-01 18:56:51.382 +07:00 [INF]  IP User Address : ::1
+2024-11-01 18:56:51.382 +07:00 [INF] Request Information: {"Method":"GET","Protocol":"HTTP/2","Path":"/api/StudentCard","Host":"localhost:7107","Headers":"Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpRequestHeaders","Body":"","$type":"RequestLogInfo"}
+2024-11-01 18:56:51.382 +07:00 [INF] Executing endpoint 'IntroductionToEF.Controllers.StudentCardController.GetAll (IntroductionToEF)'
+2024-11-01 18:56:51.386 +07:00 [INF] Route matched with {action = "GetAll", controller = "StudentCard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller IntroductionToEF.Controllers.StudentCardController (IntroductionToEF).
+2024-11-01 18:56:51.401 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[StudentID], [s].[ClassIRN], [s].[Period], [s0].[ID], [s0].[FirstMidName], [s0].[LastName]
+FROM [StudentCards] AS [s]
+INNER JOIN [Students] AS [s0] ON [s].[StudentID] = [s0].[ID]
+2024-11-01 18:56:51.418 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[IntroductionToEF.WebModel.GetAllStudentCardResponse, IntroductionToEF, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-01 18:56:51.419 +07:00 [INF] Executed action IntroductionToEF.Controllers.StudentCardController.GetAll (IntroductionToEF) in 32.8038ms
+2024-11-01 18:56:51.419 +07:00 [INF] Executed endpoint 'IntroductionToEF.Controllers.StudentCardController.GetAll (IntroductionToEF)'
+2024-11-01 18:56:51.419 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: Stream was not readable.
+   at System.IO.StreamReader..ctor(Stream stream, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean leaveOpen)
+   at IntroductionToEF.HostCommon.Middleware.APIRequestMiddleware.Invoke(HttpContext context) in E:\IntroToEF\IntroductionToEF\IntroductionToEF\IntroductionToEF\HostCommon\Middleware\APIRequestMiddleware.cs:line 61
+   at IntroductionToEF.HostCommon.Middleware.CustomeMiddleware2.Invoke(HttpContext context) in E:\IntroToEF\IntroductionToEF\IntroductionToEF\IntroductionToEF\HostCommon\Middleware\CustomeMiddleware2.cs:line 22
+   at IntroductionToEF.HostCommon.Middleware.CustomeMiddleware.Invoke(HttpContext context) in E:\IntroToEF\IntroductionToEF\IntroductionToEF\IntroductionToEF\HostCommon\Middleware\CustomeMiddleware.cs:line 22
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-11-01 18:56:51.419 +07:00 [WRN] The response has already started, the error page middleware will not be executed.
+2024-11-01 18:56:51.420 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7107/api/StudentCard - 200 null application/json; charset=utf-8 38.1325ms
+2024-11-01 18:57:01.368 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7107/api/AssignmentResult - null null
+2024-11-01 18:57:01.368 +07:00 [INF] Start Custome Middleware 1
+2024-11-01 18:57:01.368 +07:00 [INF] Start Custome Middleware 2
+2024-11-01 18:57:01.368 +07:00 [INF] Start middleware 3
+2024-11-01 18:57:01.368 +07:00 [INF]  IP User Address : ::1
+2024-11-01 18:57:01.369 +07:00 [INF] Request Information: {"Method":"GET","Protocol":"HTTP/2","Path":"/api/AssignmentResult","Host":"localhost:7107","Headers":"Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpRequestHeaders","Body":"","$type":"RequestLogInfo"}
+2024-11-01 18:57:01.369 +07:00 [INF] Executing endpoint 'IntroductionToEF.Controllers.AssignmentResultController.GetAll (IntroductionToEF)'
+2024-11-01 18:57:01.372 +07:00 [INF] Route matched with {action = "GetAll", controller = "AssignmentResult"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller IntroductionToEF.Controllers.AssignmentResultController (IntroductionToEF).
+2024-11-01 18:57:01.390 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ID], [a].[AssignmentID], [a].[Score], [a].[StudentID], [a0].[ID], [a0].[CourseID], [a0].[Description], [a0].[Title], [s].[ID], [s].[FirstMidName], [s].[LastName]
+FROM [AssignmentResults] AS [a]
+INNER JOIN [Assignments] AS [a0] ON [a].[AssignmentID] = [a0].[ID]
+INNER JOIN [Students] AS [s] ON [a].[StudentID] = [s].[ID]
+2024-11-01 18:57:01.399 +07:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[IntroductionToEF.Model.AssignmentResult, IntroductionToEF, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-01 18:57:01.401 +07:00 [INF] Executed action IntroductionToEF.Controllers.AssignmentResultController.GetAll (IntroductionToEF) in 29.0946ms
+2024-11-01 18:57:01.401 +07:00 [INF] Executed endpoint 'IntroductionToEF.Controllers.AssignmentResultController.GetAll (IntroductionToEF)'
+2024-11-01 18:57:01.401 +07:00 [ERR] An error occurred while processing the request.
+System.Text.Json.JsonException: A possible object cycle was detected. This can either be due to a cycle or if the object depth is larger than the maximum allowed depth of 32. Consider using ReferenceHandler.Preserve on JsonSerializerOptions to support cycles. Path: $.Student.AssignmentResults.Student.AssignmentResults.Student.AssignmentResults.Student.AssignmentResults.Student.AssignmentResults.Student.AssignmentResults.Student.AssignmentResults.Student.AssignmentResults.Student.AssignmentResults.Student.AssignmentResults.ID.
+   at System.Text.Json.ThrowHelper.ThrowJsonException_SerializerCycleDetected(Int32 maxDepth)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.ListOfTConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at IntroductionToEF.HostCommon.Middleware.APIRequestMiddleware.Invoke(HttpContext context) in E:\IntroToEF\IntroductionToEF\IntroductionToEF\IntroductionToEF\HostCommon\Middleware\APIRequestMiddleware.cs:line 53
+2024-11-01 18:57:01.402 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: Stream was not readable.
+   at System.IO.StreamReader..ctor(Stream stream, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean leaveOpen)
+   at IntroductionToEF.HostCommon.Middleware.APIRequestMiddleware.Invoke(HttpContext context) in E:\IntroToEF\IntroductionToEF\IntroductionToEF\IntroductionToEF\HostCommon\Middleware\APIRequestMiddleware.cs:line 61
+   at IntroductionToEF.HostCommon.Middleware.CustomeMiddleware2.Invoke(HttpContext context) in E:\IntroToEF\IntroductionToEF\IntroductionToEF\IntroductionToEF\HostCommon\Middleware\CustomeMiddleware2.cs:line 22
+   at IntroductionToEF.HostCommon.Middleware.CustomeMiddleware.Invoke(HttpContext context) in E:\IntroToEF\IntroductionToEF\IntroductionToEF\IntroductionToEF\HostCommon\Middleware\CustomeMiddleware.cs:line 22
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-11-01 18:57:01.403 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7107/api/AssignmentResult - 500 null text/plain; charset=utf-8 35.4382ms
